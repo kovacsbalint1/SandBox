@@ -57,7 +57,9 @@ export default class Content {
             res.write(Serek[index] + " ");
         }
         res.write("\n");
-
+        let empId: string | number;
+        empId = 111; // OK
+        empId = "E111";
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
