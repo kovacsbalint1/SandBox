@@ -42,6 +42,12 @@ export default class Content {
             res.write(borszinek[index] + " ");
         }
         res.write("\n");
+        var ember: [number, string, boolean] = [5, "Józsi", false];
+        for (var index in ember) {
+            res.write(ember[index] + " ");
+        }
+        res.write("\n");
+
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
