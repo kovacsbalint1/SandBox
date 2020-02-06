@@ -47,6 +47,16 @@ export default class Content {
             res.write(ember[index] + " ");
         }
         res.write("\n");
+        enum Serek {
+            Lager,
+            Ale,
+            Wheat,
+            Stout
+        }
+        for (var index in Serek) {
+            res.write(Serek[index] + " ");
+        }
+        res.write("\n");
 
         // <---- Fejezd be a kódolást
 
