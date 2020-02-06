@@ -57,9 +57,21 @@ export default class Content {
             res.write(Serek[index] + " ");
         }
         res.write("\n");
-        let empId: string | number;
-        empId = 111; // OK
-        empId = "E111";
+        let izé: string | number;
+        izé = 156;
+        izé = "Ember";
+        res.write(izé + "\n");
+        let valami: any = "Hello World!";
+        valami = 23;
+        valami = true;
+        res.write(valami + "\n");
+
+        function monddHello(): void {
+            res.write("Hello!");
+        }
+
+        let beszéd: void = monddHello();
+        res.write(beszéd);
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
