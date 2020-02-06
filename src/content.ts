@@ -1,6 +1,9 @@
-﻿import fs from "fs";
+﻿/* eslint-disable prefer-const */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-inferrable-types */
+/* eslint-disable no-var */
+import fs from "fs";
 import http from "http";
-import url from "url";
 
 interface InputInterface {
     name: string;
@@ -28,32 +31,10 @@ export default class Content {
 
         // Kezd a kódolást innen -->
 
-        res.write("Egyszerű Hello World!\n");
-
-        // Tetszőleges html teg-ek és attribútumok beépítése:
-        res.write("<span style='color: blue;'><i>Színes és dőlt Hello World!'</i></span>\n");
-
-        // Egyszerű input JSON állományból:
-        const input: InputInterface = JSON.parse(fs.readFileSync("input.json", "utf-8"));
-
-        // String template használata
-        res.write(`1. feladat: ${input.name} kora: ${input.age}\n`);
-
-        // Változó definiálása:
-        let neme = "";
-        neme = input.male ? "férfi" : "nő";
-        res.write(`2. feladat: ${input.name} neme: ${neme}\n`);
-
-        // Input form-al és <input type='number'>-el:
-        // URL paraméter(ek) (itt kor) ellenőrzése,  kiolvasása, alapértelmezett értéke 18:
-        const u = url.parse(req.url as string, true).query;
-        // ha "kor" paraméter nincs megadva vagy "kor" paraméter üres string,
-        // akkor legyen 18 az értéke, egyébként konvertáljuk számra a "kor" paraméter értékét:
-        // let kor: number = u.kor === undefined || u.kor === "" ? 18 : parseInt(u.kor as string);
-        let kor: number = parseInt(u.kor as string);
-        if (isNaN(kor) || kor < 0 || kor > 99) kor = 18; // egy kis ellenőrzés
-        res.write(`3. feladat: Kérem a korod [0-99]: <input type='text' name='kor' value=${kor} style='width:3em;'>\n`);
-        res.write(`4. feladat: Te ${kor} éves vagy!\n`);
+        var age: number = 5;
+        var name: string = "Józsi";
+        var isUpdated: boolean = false;
+        res.write(`${age} ${name} ${isUpdated}`);
 
         // <---- Fejezd be a kódolást
 
