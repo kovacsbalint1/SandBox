@@ -32,16 +32,16 @@ export default class Content {
         // Kezd a kódolást innen -->
 
         var age: number = 5;
-        res.write(`Kor: ${age}`);
+        res.write(`Kor: ${age}\n`);
         var name: string = "Józsi";
-        res.write(`Név: ${name}`);
+        res.write(`Név: ${name}\n`);
         var igaze: boolean = false;
-        res.write(` ${igaze}`);
+        res.write(`${igaze}\n`);
         let borszinek: string[] = ["fehér", "fehér", "fehér"];
         for (var index in borszinek) {
             res.write(borszinek[index]);
         }
-
+        res.write("\n");
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
