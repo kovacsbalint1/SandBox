@@ -39,7 +39,7 @@ export default class Content {
         res.write(`${igaze}\n`);
         let borszinek: string[] = ["fehér", "fehér", "fehér"];
         for (var index in borszinek) {
-            res.write(borszinek[index]);
+            res.write(borszinek[index] + " ");
         }
         res.write("\n");
         // <---- Fejezd be a kódolást
