@@ -49,14 +49,12 @@ export default class Content {
         }
         res.write("\n");
         enum Serek {
-            Lager,
+            Lager = 2,
             Ale,
             Wheat,
             Stout
         }
-        for (var index in Serek) {
-            res.write(Serek[index] + " ");
-        }
+        res.write(Serek.Lager);
         res.write("\n");
         let izé: string | number;
         izé = 156;
