@@ -54,9 +54,9 @@ export default class Content {
             Wheat,
             Stout
         }
-        for (var index in Serek) {
+        /*for (var index in Serek) {
             res.write(Serek[index] + " ");
-        }
+        }*/
         res.write("\n");
         let izé: string | number;
         izé = 156;
