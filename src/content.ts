@@ -62,10 +62,10 @@ export default class Content {
         izé = 156;
         izé = "Ember";
         res.write(izé + "\n");
-        let valami: any = "Hello World!";
+        /*let valami: any = "Hello World!";
         valami = 23;
         valami = true;
-        res.write(valami + "\n");
+        res.write(valami + "\n");*/
 
         function monddHello(): void {
             res.write("Hello!");
