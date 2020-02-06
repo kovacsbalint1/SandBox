@@ -41,7 +41,7 @@ export default class Content {
         for (var index in borszinek) {
             res.write(borszinek[index]);
         }
-        
+
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
