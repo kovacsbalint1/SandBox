@@ -31,7 +31,6 @@ export default class Content {
         res.write("<body><form><pre>");
 
         // Kezd a kódolást innen -->
-
         var age: number = 5;
         res.write(`Kor: ${age}\n`);
         var name: string = "Józsi";
@@ -54,8 +53,6 @@ export default class Content {
             Wheat,
             Stout
         }
-        res.write(Serek.Lager);
-        res.write("\n");
         let izé: string | number;
         izé = 156;
         izé = "Ember";
@@ -68,8 +65,6 @@ export default class Content {
             res.write("Hello!");
         }
 
-        let beszéd: void = monddHello();
-        res.write(beszéd);
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
